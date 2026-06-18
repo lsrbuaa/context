@@ -38,11 +38,17 @@ flowchart TD
     L --> F
 ```
 
+![用户记忆与 Context Engineering 研究价值体系图](assets/figures/context-research-value-map.png)
+
 ## 仓库结构
 
 ```text
 .
 ├── README.md
+├── assets/
+│   └── figures/
+│       ├── context-research-value-map.png
+│       └── context-research-value-map.svg
 ├── docs/
 │   ├── architecture.md
 │   ├── evaluation.md
