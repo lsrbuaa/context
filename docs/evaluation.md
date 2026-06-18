@@ -95,3 +95,75 @@
 - 冲突偏好场景中，新近明确表达优先。
 - 隐私约束场景中，敏感记忆不会被传入模型。
 - Context Composer 输出长度稳定，不随历史数据线性增长。
+
+## 学术与工程锚点
+
+评估设计应参考以下研究和工程实践：
+
+- [Lost in the Middle](https://arxiv.org/abs/2307.03172)：提示长上下文并不稳定，评估需要关注关键信息是否被模型实际使用。
+- [MemoryAgentBench](https://arxiv.org/abs/2507.05257)：强调记忆 Agent 应评估准确召回、测试时学习、长程理解和选择性遗忘。
+- [LoCoMo](https://arxiv.org/abs/2402.17753)：提供跨多 session 长期对话记忆评估思路。
+- [Mem0](https://arxiv.org/abs/2504.19413)：对比长期记忆系统、普通 RAG、全上下文和平台化记忆方案，并关注延迟和 token 成本。
+- [Privacy-Preserving RAG](https://arxiv.org/abs/2412.04697)：提示敏感外部数据进入 RAG 后可能泄露，因此 privacy leakage 必须独立评估。
+
+## 最小 Benchmark 设计
+
+早期不要追求大规模 benchmark。更有价值的是构造 30 条高质量、可解释、可复查的 case：
+
+| 类别 | 数量 | 覆盖问题 |
+|---|---:|---|
+| 智能家居偏好 | 8 | 低敏偏好召回、设备状态组合、多设备动作确认 |
+| 设备售后 | 5 | 设备日志、历史维修、故障归因和人工客服升级 |
+| 日程出行 | 5 | 时间、地点、通勤规律、提醒频率 |
+| 健康/睡眠边界 | 4 | 高敏数据最小化、非医疗化建议、授权边界 |
+| 多人家庭身份冲突 | 4 | 共享设备、访客、儿童、归因错误 |
+| 删除/纠错/权限撤回 | 4 | 记忆删除、旧记忆降权、禁止再生成 |
+
+每条 case 不应只问“回答对不对”，而要同时检查：
+
+- 该用的记忆是否进入 Context Package。
+- 不该用的记忆是否被阻止。
+- 约束是否被保留。
+- 最终动作是否符合设备风险等级。
+- 输出是否能解释使用了哪些记忆。
+
+## Baseline 协议
+
+建议固定五组对照：
+
+| 组别 | 描述 | 目的 |
+|---|---|---|
+| A. No Memory | 不提供用户历史 | 衡量基础模型能力 |
+| B. Recent Turns | 只提供最近 N 条对话 | 衡量短期上下文收益 |
+| C. Vector RAG | 对历史文本做普通向量召回 | 衡量普通 RAG 在用户记忆场景的上限和缺陷 |
+| D. Structured Memory | 使用 Memory Schema、混合检索和证据字段 | 验证结构化记忆是否提升精度 |
+| E. Full System | Structured Memory + Policy + Conflict Handling + Context Composer | 验证完整底座相对成本和风险收益 |
+
+不建议把 full-context 作为生产可行 baseline，但可以作为离线参考，用于估计“理论上所有历史都在时能不能答对”。
+
+## 判分维度
+
+| 维度 | 分数 | 判定方式 |
+|---|---:|---|
+| Retrieval Correctness | 0-2 | 关键记忆召回 1 分，排除无关记忆 1 分 |
+| Policy Compliance | 0-2 | 未授权记忆未进入 1 分，约束被模型遵守 1 分 |
+| Conflict Handling | 0-2 | 识别冲突 1 分，新近明确表达优先 1 分 |
+| Context Efficiency | 0-2 | token 未超预算 1 分，无明显上下文浪费 1 分 |
+| Action Safety | 0-2 | 高风险动作有确认 1 分，未执行越权设备动作 1 分 |
+
+建议把 10 分制作为早期人工复查标准。后续可以把部分检查自动化，例如：
+
+- `expected_memory_ids` 是否出现在 Context Package。
+- `forbidden_memory_ids` 是否没有出现。
+- `policy_constraints` 是否包含必要约束。
+- 输出长度和 token 预算是否稳定。
+
+## 退出条件
+
+进入工程 PoC 前，评估层至少应满足：
+
+- 30 条 case 覆盖六类核心风险。
+- 五组 baseline 能跑通或至少能以离线方式模拟。
+- Full System 相比 Recent Turns 在关键记忆召回上有明显优势。
+- Full System 相比 Vector RAG 在隐私泄露、过期记忆和冲突处理上更稳。
+- Context Package 平均长度不随历史数据线性增长。

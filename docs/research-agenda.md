@@ -2,6 +2,12 @@
 
 本文档把“值得研究的问题”拆成可跟踪的工程研究主线。每条主线都包含研究问题、学术锚点、工程难点和可评估指标。
 
+配套材料：
+
+- [literature-review.md](literature-review.md)：论文综述和工程启发。
+- [engineering-cases.md](engineering-cases.md)：工程案例和可复用模式。
+- [professionalization-plan.md](professionalization-plan.md)：仓库专业化升级路径。
+
 ## 1. 记忆抽取：什么值得记住
 
 核心问题：
@@ -175,7 +181,33 @@ memory_score =
 
 原因很简单：没有 eval，记忆系统会退化成凭感觉调 prompt。
 
-## 8. 参考研究
+## 8. 研究假设
+
+后续每一轮研究都应围绕可验证假设展开，而不是继续堆概念。
+
+| 假设 | 验证方式 | 成功标准 |
+|---|---|---|
+| H1：结构化记忆优于最近对话 | 对比 Recent Turns 与 Structured Memory | Memory Recall 明显提升，Context Token Waste 不上升 |
+| H2：Policy 前置过滤能降低隐私泄露 | 对比检索后过滤与检索前/中策略过滤 | forbidden_memory_ids 进入 Context Package 的比例接近 0 |
+| H3：Context Composer 能提升单位 token 价值 | 对比普通 RAG 拼接和结构化 Context Package | Context Efficiency 提升，输出长度更稳定 |
+| H4：显式反馈优先能降低纠错成本 | 构造“用户明确纠正旧偏好”case | 旧记忆被降权，新记忆立即生效 |
+| H5：时间有效性比静态 profile 更适合跨设备场景 | 对比无时间字段和有 valid_from / valid_until 的记忆 | Staleness Error 降低 |
+| H6：端侧高敏摘要能兼顾隐私和个性化 | 对比原始高敏数据、端侧摘要、完全不用高敏数据 | Privacy Leakage 不上升，任务效果优于完全不用 |
+
+## 9. 证据等级
+
+为了避免文档继续浮于表面，建议给每条重要判断标注证据等级：
+
+| 等级 | 含义 | 示例 |
+|---|---|---|
+| A | 有论文和工程案例共同支持 | 长上下文不能替代高质量上下文 |
+| B | 有论文支持，工程实践仍需验证 | 选择性遗忘应纳入记忆评估 |
+| C | 有工程案例支持，但缺少公开可复现实验 | 端侧个人数据引擎适合高敏记忆 |
+| D | 本仓库推断，需要 PoC 验证 | 跨设备家庭场景必须引入 Identity Resolver |
+
+后续新增内容应尽量把 D 级判断推进到 B 或 A。
+
+## 10. 参考研究
 
 - [A Survey on the Memory Mechanism of Large Language Model based Agents](https://arxiv.org/abs/2404.13501)
 - [A Survey of Context Engineering for Large Language Models](https://arxiv.org/abs/2507.13334)

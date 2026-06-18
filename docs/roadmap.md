@@ -23,6 +23,11 @@
 
 ## 阶段 1：数据资产地图，2-3 周
 
+前置目标：
+
+- 基于 [literature-review.md](literature-review.md) 和 [engineering-cases.md](engineering-cases.md) 完成研究证据链。
+- 明确仓库专业化升级项：证据、工程对象、评估、路线图。
+
 目标：
 
 - 梳理现有设备和 App 可用数据。
@@ -34,6 +39,13 @@
 - 用户数据资产地图。
 - 场景数据需求表。
 - 隐私风险清单。
+- 关键判断与论文/案例的映射表。
+
+退出条件：
+
+- 每类数据源都有可靠性、敏感度、授权方式和默认处理策略。
+- 至少选出一个低敏、高频、可验证的 PoC 场景。
+- 明确哪些数据只能端侧处理，哪些可以进入云端记忆系统。
 
 ## 阶段 2：记忆 Schema 和事件标准，3-4 周
 
@@ -49,6 +61,14 @@
 - Memory Schema。
 - 记忆分类体系。
 - 样例数据集。
+- Evidence Ledger Schema。
+- Context Package Contract。
+
+退出条件：
+
+- Event、Memory、Policy、Evidence、Context Package 都有最小 JSON 结构。
+- Memory 有 candidate、active、pending_confirmation、deprecated、deleted 等生命周期状态。
+- 删除语义覆盖结构化记录、向量索引、摘要缓存和图谱关系。
 
 ## 阶段 3：记忆抽取与检索 PoC，4-6 周
 
@@ -66,6 +86,13 @@
 - 检索服务。
 - 场景 demo。
 
+退出条件：
+
+- 能从样例 Event 中生成候选 Memory。
+- 能解释每条 Memory 的 evidence。
+- 能比较最近对话、普通 RAG、结构化记忆三组结果。
+- 高敏或未授权记忆不会进入 Context Package。
+
 ## 阶段 4：Context Composer 和评估集，4-6 周
 
 目标：
@@ -81,6 +108,13 @@
 - eval 数据集。
 - 实验报告。
 - MVP 产品建议。
+
+退出条件：
+
+- 至少完成 30 条 eval case。
+- 五组 baseline 至少能离线对比。
+- Context Package 长度稳定，不随历史数据线性增长。
+- 输出包含 memory_id、policy_id 和 evidence 摘要，便于审计。
 
 ## 阶段 5：用户可控与线上灰度，6-8 周
 
@@ -99,9 +133,10 @@
 
 ## 近期 Backlog
 
-- 拆出记忆 taxonomy 初稿。
-- 定义 `events/*.jsonl` 和 `memories/*.jsonl` 的样例数据格式。
-- 实现一个最小 Context Composer CLI。
-- 构建 20-50 条智能家居场景 eval case。
-- 对比“最近对话”和“结构化记忆检索”的效果差异。
-- 设计用户删除、纠错和冲突确认的最小交互流程。
+- 建立数据资产地图：设备、App、云端、客服、显式反馈。
+- 补充 Evidence Ledger 和 Context Package Contract。
+- 定义 `events/*.jsonl`、`memories/*.jsonl`、`policies/*.jsonl`、`eval-cases/*.jsonl` 的样例格式。
+- 构建 30 条最小 eval case，覆盖智能家居、售后、日程、健康边界、多人家庭和删除纠错。
+- 对比“无记忆”“最近对话”“普通 RAG”“结构化记忆”“完整 Policy + Composer”五组 baseline。
+- 设计用户删除、纠错、权限撤回和冲突确认的最小交互流程。
+- 在完成 eval case 之后，再实现最小 Context Composer CLI。

@@ -199,6 +199,8 @@ Raw Signal
 
 ## 9. 参考研究
 
+更完整的论文综述见 [literature-review.md](literature-review.md)，工程案例拆解见 [engineering-cases.md](engineering-cases.md)。
+
 - [A Survey of Context Engineering for Large Language Models](https://arxiv.org/abs/2507.13334)：把 Context Engineering 归纳为 context retrieval / generation、context processing、context management，并讨论 RAG、memory systems、tool-integrated reasoning 等系统实现。
 - [A Survey on the Memory Mechanism of Large Language Model based Agents](https://arxiv.org/abs/2404.13501)：系统整理 LLM Agent 记忆模块的设计、更新、评估和应用。
 - [A Survey of Personalized Large Language Models: Progress and Future Directions](https://arxiv.org/abs/2502.11528)：从 personalized context、personalized adapters、personalized preferences 三个层面整理个性化大模型。

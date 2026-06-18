@@ -116,11 +116,136 @@
 
 | 状态 | 含义 |
 |---|---|
+| `candidate` | 候选记忆，等待评分或更多证据 |
 | `active` | 当前可用 |
 | `pending_confirmation` | 存在冲突或证据不足，需要确认 |
+| `active_with_override` | 旧记忆仍存在，但被近期明确表达临时覆盖 |
 | `deprecated` | 已过期或长期未验证，不再主动使用 |
 | `rejected` | 被用户或系统判定为错误，避免再次生成 |
 | `deleted` | 用户删除，必须不可恢复或不可使用 |
+
+## Evidence Ledger Schema
+
+Evidence Ledger 是记忆系统的证据账本。它不等同于原始日志，而是记录“某条记忆为什么存在、能否被审计、删除时要影响哪些派生物”。
+
+```json
+{
+  "evidence_id": "evd_001",
+  "memory_id": "mem_001",
+  "source_event_ids": ["evt_101", "evt_204"],
+  "source_type": "device_event",
+  "source_system": "smart_light",
+  "observed_at": "2026-06-10T22:45:00+08:00",
+  "ingested_at": "2026-06-10T22:45:03+08:00",
+  "actor": {
+    "type": "user",
+    "id": "user_123",
+    "confidence": 0.91
+  },
+  "consent_snapshot": {
+    "status": "granted",
+    "policy_id": "pol_sleep_001",
+    "scope": ["smart_home", "sleep_assistant"]
+  },
+  "redaction": {
+    "method": "field_minimization",
+    "removed_fields": ["raw_voice_transcript"]
+  },
+  "derived_artifacts": {
+    "vector_ids": ["vec_mem_001"],
+    "summary_ids": ["sum_mem_001"],
+    "graph_edge_ids": ["edge_user_light_pref_001"]
+  },
+  "audit_status": "active"
+}
+```
+
+### Evidence Ledger 规则
+
+- 每条 active 记忆至少应有一条 evidence。
+- 用户删除记忆时，必须通过 `derived_artifacts` 找到向量、摘要、图谱边和缓存。
+- 如果证据来源授权撤回，相关记忆应进入 `pending_confirmation`、`deprecated` 或 `deleted`。
+- 如果 actor 归因置信度低，记忆不得直接进入 `active`。
+
+## Policy Schema
+
+Policy 是权限、隐私和行为约束的可执行对象，不应只是 Memory 的字符串字段。
+
+```json
+{
+  "policy_id": "pol_sleep_001",
+  "user_id": "user_123",
+  "scope": "scenario.sleep_assistant",
+  "sensitivity_allowed": ["low", "medium"],
+  "sensitivity_denied": ["high"],
+  "allowed_actions": ["suggest_device_change"],
+  "requires_confirmation_actions": ["execute_multi_device_change"],
+  "denied_actions": ["broadcast_health_data"],
+  "valid_from": "2026-06-01",
+  "valid_until": null,
+  "source": "user_settings",
+  "status": "active"
+}
+```
+
+## Context Package Contract
+
+Context Package 是模型调用前的最终上下文接口。它不是记忆库镜像，而是经过任务相关性、权限过滤、冲突处理和 token 预算裁剪后的结果。
+
+```json
+{
+  "context_package_id": "ctx_001",
+  "created_at": "2026-06-18T15:00:00+08:00",
+  "task": {
+    "scenario": "sleep_assistant",
+    "user_request": "我准备睡了",
+    "risk_level": "medium"
+  },
+  "current_state": {
+    "time": "22:35",
+    "location": "home.bedroom",
+    "devices": {
+      "bedroom_light": {
+        "brightness": 70,
+        "color_temperature": "cool"
+      }
+    }
+  },
+  "memories": [
+    {
+      "memory_id": "mem_001",
+      "summary": "用户睡前偏好卧室灯光低亮度、暖色温。",
+      "confidence": 0.84,
+      "sensitivity": "low",
+      "evidence_ids": ["evd_001"]
+    }
+  ],
+  "policies": [
+    {
+      "policy_id": "pol_sleep_001",
+      "constraint": "如需改变多个设备状态，先给出确认。"
+    }
+  ],
+  "redaction_report": {
+    "blocked_memory_ids": [],
+    "blocked_reason": []
+  },
+  "token_budget": {
+    "max_tokens": 2000,
+    "memory_tokens": 220,
+    "policy_tokens": 80
+  },
+  "audit_refs": ["aud_ctx_001"]
+}
+```
+
+### Context Package 规则
+
+- `memories` 中只能包含当前任务必要的信息。
+- `policies` 中必须包含和当前动作相关的约束。
+- `redaction_report` 应记录哪些候选记忆被过滤以及原因。
+- `audit_refs` 用于追踪本次模型调用使用了哪些记忆和策略。
+- Context Package 长度应由预算控制，不应随用户历史线性增长。
 
 ## 记忆评分
 
