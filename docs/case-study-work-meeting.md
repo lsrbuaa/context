@@ -504,6 +504,14 @@
 | `work_meeting_followup_001` | 会后待办是否先确认再沉淀 | candidate 保持 `pending_confirmation`，未确认前不自动发送 |
 | `work_meeting_privacy_001` | 共享屏幕时是否保护敏感上下文 | 屏蔽客户私密信息，不弹出高敏私有提醒 |
 
+配套样例已经落成 JSONL：
+
+- [../eval-cases/work-meeting.jsonl](../eval-cases/work-meeting.jsonl)：3 条 eval case。
+- [../samples/work-meeting/events.jsonl](../samples/work-meeting/events.jsonl)：会前、会中、会后关键 Event。
+- [../samples/work-meeting/memories.jsonl](../samples/work-meeting/memories.jsonl)：可用记忆、候选记忆和禁止进入上下文的高敏记忆。
+- [../samples/work-meeting/policies.jsonl](../samples/work-meeting/policies.jsonl)：会议和共享屏幕策略。
+- [../samples/work-meeting/context-packages.jsonl](../samples/work-meeting/context-packages.jsonl)：预期 Context Package 样例。
+
 ## 11. 工程启示
 
 工作会议场景的工程价值不在于“总结会议”，而在于把信息放到正确的生命周期里：

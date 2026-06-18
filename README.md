@@ -64,6 +64,15 @@ flowchart TD
 │   ├── taxonomy.md
 │   ├── whitepaper.md
 │   └── roadmap.md
+├── eval-cases/
+│   ├── schema.json
+│   └── work-meeting.jsonl
+├── samples/
+│   └── work-meeting/
+│       ├── context-packages.jsonl
+│       ├── events.jsonl
+│       ├── memories.jsonl
+│       └── policies.jsonl
 └── .gitignore
 ```
 
@@ -75,6 +84,11 @@ flowchart TD
 2. [docs/case-study-work-meeting.md](docs/case-study-work-meeting.md)：工作会议场景的端到端案例叙事，从信号、记忆、策略到 Context Package。
 3. [docs/literature-review.md](docs/literature-review.md)：论文综述，以及论文结论如何转成工程规则。
 4. [docs/engineering-cases.md](docs/engineering-cases.md)：LangGraph、LlamaIndex、Letta、Mem0、Zep、Anthropic、OpenAI、Apple、Samsung、Google 等案例的工程启发。
+
+样例资产路径：
+
+1. [eval-cases/work-meeting.jsonl](eval-cases/work-meeting.jsonl)：工作会议场景的 3 条最小 eval case。
+2. [samples/work-meeting/](samples/work-meeting/)：配套 Event、Memory、Policy 和 Context Package 样例。
 
 白皮书路径：
 
@@ -100,6 +114,7 @@ flowchart TD
 - Memory 状态机。
 - Context Package Contract。
 - 最小 Eval Suite。
+- 工作会议场景样例资产。
 
 后续如进入 PoC，可以从以下方向切入：
 
