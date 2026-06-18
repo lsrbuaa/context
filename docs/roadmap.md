@@ -13,6 +13,9 @@
 产出：
 
 - `README.md`
+- `docs/whitepaper.md`
+- `docs/taxonomy.md`
+- `docs/research-agenda.md`
 - `docs/architecture.md`
 - `docs/memory-schema.md`
 - `docs/evaluation.md`

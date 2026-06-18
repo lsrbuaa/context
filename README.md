@@ -1,8 +1,8 @@
 # Context
 
-`context` 是一个围绕 **User Memory Context Engineering** 的研究与原型工作区。
+`context` 是一个围绕 **User Memory Context Engineering** 的研究与工程化白皮书仓库。
 
-这个仓库关注的问题不是如何把更多历史数据塞进大模型，而是如何把贴身、多端、长期的用户数据加工成短、准、可控、可评估的 Agent 上下文。
+这个仓库关注的问题不是如何把更多历史数据塞进大模型，而是如何把贴身、多端、长期的用户数据加工成短、准、可控、可评估的 Agent 上下文，并进一步沉淀为智能硬件生态可复用的跨设备用户记忆底座。
 
 ## 核心命题
 
@@ -53,12 +53,23 @@ flowchart TD
 │   ├── architecture.md
 │   ├── evaluation.md
 │   ├── memory-schema.md
+│   ├── research-agenda.md
 │   ├── research-framework.md
+│   ├── taxonomy.md
+│   ├── whitepaper.md
 │   └── roadmap.md
 └── .gitignore
 ```
 
 ## 推荐阅读顺序
+
+白皮书路径：
+
+1. [docs/whitepaper.md](docs/whitepaper.md)：跨设备用户记忆底座的主白皮书。
+2. [docs/taxonomy.md](docs/taxonomy.md)：核心对象、记忆类型、敏感等级和使用规则。
+3. [docs/research-agenda.md](docs/research-agenda.md)：值得研究的工程问题、学术锚点和评估指标。
+
+基础框架路径：
 
 1. [docs/research-framework.md](docs/research-framework.md)：完整研究框架原稿。
 2. [docs/architecture.md](docs/architecture.md)：系统边界、分层模型和核心模块。
@@ -68,7 +79,7 @@ flowchart TD
 
 ## 当前状态
 
-当前仓库处于研究与规划阶段，尚未绑定具体技术栈。后续 PoC 可以从以下方向切入：
+当前仓库处于研究白皮书与工程规划阶段，尚未绑定具体技术栈。下一步如进入 PoC，可以从以下方向切入：
 
 - `memory-store`：结构化用户记忆库和索引。
 - `memory-extractor`：从事件中抽取候选记忆并评分。
