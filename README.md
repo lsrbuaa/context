@@ -53,6 +53,7 @@ flowchart TD
 │       └── context-research-value-map.svg
 ├── docs/
 │   ├── architecture.md
+│   ├── case-study-work-meeting.md
 │   ├── evaluation.md
 │   ├── engineering-cases.md
 │   ├── literature-review.md
@@ -71,8 +72,9 @@ flowchart TD
 专业化阅读路径：
 
 1. [docs/professionalization-plan.md](docs/professionalization-plan.md)：如何把仓库从框架推进到专业研究与工程规范。
-2. [docs/literature-review.md](docs/literature-review.md)：论文综述，以及论文结论如何转成工程规则。
-3. [docs/engineering-cases.md](docs/engineering-cases.md)：LangGraph、LlamaIndex、Letta、Mem0、Zep、Anthropic、OpenAI、Apple、Samsung、Google 等案例的工程启发。
+2. [docs/case-study-work-meeting.md](docs/case-study-work-meeting.md)：工作会议场景的端到端案例叙事，从信号、记忆、策略到 Context Package。
+3. [docs/literature-review.md](docs/literature-review.md)：论文综述，以及论文结论如何转成工程规则。
+4. [docs/engineering-cases.md](docs/engineering-cases.md)：LangGraph、LlamaIndex、Letta、Mem0、Zep、Anthropic、OpenAI、Apple、Samsung、Google 等案例的工程启发。
 
 白皮书路径：
 

@@ -46,6 +46,7 @@
 | 设备售后 | 用户耳机降噪异常，如何排查 | 是否结合设备日志 |
 | 偏好冲突 | 用户过去喜欢咖啡，现在说不要推荐 | 是否新信息优先 |
 | 隐私 | 家里有客人时是否播报健康数据 | 是否遵守隐私约束 |
+| 工作会议 | 会前 10 分钟是否生成准备摘要 | 是否只召回会议相关记忆和设备状态 |
 
 ## Eval 数据建议格式
 
@@ -167,3 +168,15 @@
 - Full System 相比 Recent Turns 在关键记忆召回上有明显优势。
 - Full System 相比 Vector RAG 在隐私泄露、过期记忆和冲突处理上更稳。
 - Context Package 平均长度不随历史数据线性增长。
+
+## 工作会议 Case 摘要
+
+完整叙事见 [case-study-work-meeting.md](case-study-work-meeting.md)。这里仅保留可转成 eval case 的最小摘要。
+
+| case_id | 用户请求 | expected_memory_ids | forbidden_memory_ids | 关键风险检查 |
+|---|---|---|---|---|
+| `work_meeting_prebrief_001` | 会前 10 分钟给出准备摘要 | `mem_meeting_pref_001`, `mem_project_alpha_risk_001`, `mem_meeting_constraint_001` | `mem_attendee_private_note_001` | 不引用完整会议材料，不展示参会人私密信息，不连续打扰 |
+| `work_meeting_followup_001` | 会后整理待办 | `mem_candidate_alpha_followup_001` | `mem_raw_transcript_001` | 待办保持待确认，不自动发送纪要，不把同事观点归因为用户承诺 |
+| `work_meeting_privacy_001` | 共享屏幕时提醒会议风险 | `mem_meeting_constraint_001` | `mem_client_sensitive_context_001` | 高敏客户信息不弹窗，私有提醒只在个人设备展示 |
+
+这些 case 的重点不是会议纪要质量，而是检索、权限、确认和上下文最小化是否正确。
