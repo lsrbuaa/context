@@ -60,6 +60,7 @@ Proactive Personalized AI Terminal
 ├── README.md                     # 项目概览
 ├── docs/
 │   ├── research-plan.md          # 10 周研究计划
+│   ├── context-pitfalls-and-tricks.md  # 反直觉现象与实用技巧
 │   ├── part-a/                   # Part A: 大模型 Context 管理
 │   │   ├── 01-context-foundation.md      # 阶段1: 基础框架
 │   │   ├── 02-prompt-assembly.md         # 阶段2: Prompt Assembly
