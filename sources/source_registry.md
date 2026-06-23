@@ -39,6 +39,9 @@
 | S030 | Alpha-Service: AI Glasses Proactive Service System | (主动服务) | 2024 | arXiv (待确认ID) | 五模块架构：input/task scheduling/tool/memory/output | 04, 07 | 中 |
 | S031 | Ego4D: Around the World in 3,000 Hours of Egocentric Video | Meta AI / Ego-Exo4D | 2022-2024 | arXiv:2110.07058 | 大规模第一人称视觉数据集，支持活动识别、动作预测 | 04 | 高 |
 | S032 | Temporal Action Segmentation: A Survey | 多作者 | 2023 | arXiv | 时序动作分割方法综述：SOTA 算法和 benchmark | 04 | 中 |
+| S033 | Voice Activity Detection in Noisy Environments | 多作者 | 2023 | 多来源 | 端侧 VAD 算法：低功耗语音检测 | 04 | 中 |
+| S034 | Memory Consolidation in Cognitive Architectures | 认知科学综述 | 多年 | 教科书 | 记忆巩固理论：编码→存储→巩固→检索 | 05 | 强(理论) |
+| S035 | GDPR Article 17 - Right to Erasure (被遗忘权) | European Union | 2018 | gdpr.eu | 用户有权要求删除个人数据，记忆系统必须支持 | 05 | 强(法规) |
 
 ## 官方文档
 
