@@ -1,0 +1,238 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hardware Context Object",
+  "description": "智能硬件 Context Engineering 统一对象定义",
+  "type": "object",
+  "required": ["context_id", "timestamp", "source", "scene", "user_state", "device_state", "prompt_priority"],
+  "properties": {
+    "context_id": {
+      "type": "string",
+      "description": "唯一标识符",
+      "pattern": "^ctx_[0-9]{4}_[0-9]{2}_[0-9]{2}_[0-9]{3,}$",
+      "examples": ["ctx_2026_06_23_001"]
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 时间戳"
+    },
+    "source": {
+      "type": "object",
+      "description": "数据来源信息",
+      "required": ["device_type", "sensors", "confidence"],
+      "properties": {
+        "device_type": {
+          "type": "string",
+          "enum": ["smart_glasses", "earbuds", "ai_pin", "desktop_robot", "home_robot", "vla_robot"],
+          "description": "设备类型"
+        },
+        "sensors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["camera", "microphone", "imu", "gps", "bluetooth", "depth", "lidar", "touch", "temperature"]
+          },
+          "description": "参与采集的传感器列表"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "整体置信度"
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "description": "当前场景描述",
+      "properties": {
+        "location_type": {
+          "type": "string",
+          "enum": ["home", "office", "outdoor", "commute", "restaurant", "store", "gym", "other"],
+          "description": "场景类型"
+        },
+        "activity": {
+          "type": "string",
+          "description": "当前活动",
+          "examples": ["meeting_preparation", "cooking", "walking", "working", "resting"]
+        },
+        "people": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "person_id": {
+                "type": "string",
+                "description": "已识别人物 ID，未知人物为 null"
+              },
+              "role": {
+                "type": "string",
+                "description": "关系角色",
+                "examples": ["colleague", "family", "friend", "stranger"]
+              },
+              "identity_confidence": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              }
+            }
+          },
+          "description": "在场人物"
+        },
+        "objects": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "场景中的关键物体"
+        },
+        "spatial_context": {
+          "type": "string",
+          "description": "空间关系描述"
+        }
+      }
+    },
+    "user_state": {
+      "type": "object",
+      "description": "用户状态推断",
+      "properties": {
+        "inferred_intent": {
+          "type": "string",
+          "description": "推断的用户意图"
+        },
+        "attention_state": {
+          "type": "string",
+          "enum": ["focused", "distracted", "idle", "transitioning"],
+          "description": "注意力状态"
+        },
+        "interruptibility": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "none"],
+          "description": "可打扰程度"
+        },
+        "emotional_state": {
+          "type": "string",
+          "enum": ["neutral", "positive", "negative", "stressed", "relaxed"],
+          "description": "情绪状态推断"
+        }
+      }
+    },
+    "memory_links": {
+      "type": "object",
+      "description": "关联的记忆引用",
+      "properties": {
+        "episodic": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "相关情景记忆 ID 列表"
+        },
+        "semantic": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "相关语义记忆 ID 列表"
+        },
+        "procedural": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "相关程序性记忆 ID 列表"
+        }
+      }
+    },
+    "device_state": {
+      "type": "object",
+      "description": "设备状态",
+      "required": ["battery", "network", "available_outputs"],
+      "properties": {
+        "battery": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "电量百分比"
+        },
+        "network": {
+          "type": "string",
+          "enum": ["online", "offline", "limited"],
+          "description": "网络状态"
+        },
+        "available_outputs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["audio", "visual_overlay", "haptic", "screen", "motor", "led"]
+          },
+          "description": "可用输出通道"
+        },
+        "compute_budget": {
+          "type": "string",
+          "enum": ["full", "limited", "minimal"],
+          "description": "可用算力预算"
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "description": "隐私治理信息",
+      "properties": {
+        "contains_bystander": {
+          "type": "boolean",
+          "description": "是否包含旁观者数据"
+        },
+        "storage_policy": {
+          "type": "string",
+          "enum": ["ephemeral", "short_term_only", "long_term_allowed", "user_confirmed"],
+          "description": "存储策略"
+        },
+        "requires_user_confirmation": {
+          "type": "boolean",
+          "description": "是否需要用户确认后才能存储/使用"
+        },
+        "sensitivity_level": {
+          "type": "string",
+          "enum": ["public", "private", "sensitive", "confidential"],
+          "description": "敏感度等级"
+        }
+      }
+    },
+    "prompt_priority": {
+      "type": "object",
+      "description": "进入 Prompt 的优先级评分",
+      "properties": {
+        "task_relevance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "与当前任务的相关性"
+        },
+        "recency": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "时间新鲜度"
+        },
+        "spatial_relevance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "空间相关性"
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "信息置信度"
+        },
+        "risk_level": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "critical"],
+          "description": "风险等级"
+        },
+        "include_in_prompt": {
+          "type": "boolean",
+          "description": "最终决定：是否纳入 prompt"
+        },
+        "composite_score": {
+          "type": "number",
+          "description": "综合评分 (Context Ranker 计算结果)"
+        }
+      }
+    }
+  }
+}
