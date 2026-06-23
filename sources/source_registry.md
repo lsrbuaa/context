@@ -45,6 +45,9 @@
 | S036 | Interruption Management in Smart/Ubiquitous Environments | HCI 研究综合 | 多年 | 多来源 | 打扰时机需考虑用户活动状态、认知负荷、社交情境 | 06 | 中 |
 | S037 | OpenVLA: An Open-Source Vision-Language-Action Model | Kim et al. (Stanford) | 2024 | arXiv:2406.09246 | 开源 VLA：展示 action context 的输入格式和 tokenization 方式 | 06, 07 | 高 |
 | S038 | MemoryVLA: Cognition-Memory-Action Framework | (具身智能研究) | 2025 | OpenReview | 机器人记忆系统：工作记忆+感知记忆库+动作决策结合 | 06, 07 | 中 |
+| S039 | Meta Ray-Ban AI Glasses (产品分析) | Meta | 2023-2025 | meta.com | 第一人称视觉AI眼镜：支持拍照+问答，暂无主动服务/持续记忆 | 07 | 中(产品) |
+| S040 | Humane AI Pin (产品分析与失败复盘) | Humane | 2024 | 多评测来源 | 无屏AI终端：延迟高、准确率不足、场景理解弱→context管理问题 | 07 | 中(推断) |
+| S041 | Friend Pendant / Omi (产品分析) | Friend/Omi | 2024-2025 | friend.com/omi.me | 随身录音+记忆设备：聚焦记忆助手而非全能助手 | 07 | 中(产品) |
 
 ## 官方文档
 
