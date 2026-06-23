@@ -42,6 +42,9 @@
 | S033 | Voice Activity Detection in Noisy Environments | 多作者 | 2023 | 多来源 | 端侧 VAD 算法：低功耗语音检测 | 04 | 中 |
 | S034 | Memory Consolidation in Cognitive Architectures | 认知科学综述 | 多年 | 教科书 | 记忆巩固理论：编码→存储→巩固→检索 | 05 | 强(理论) |
 | S035 | GDPR Article 17 - Right to Erasure (被遗忘权) | European Union | 2018 | gdpr.eu | 用户有权要求删除个人数据，记忆系统必须支持 | 05 | 强(法规) |
+| S036 | Interruption Management in Smart/Ubiquitous Environments | HCI 研究综合 | 多年 | 多来源 | 打扰时机需考虑用户活动状态、认知负荷、社交情境 | 06 | 中 |
+| S037 | OpenVLA: An Open-Source Vision-Language-Action Model | Kim et al. (Stanford) | 2024 | arXiv:2406.09246 | 开源 VLA：展示 action context 的输入格式和 tokenization 方式 | 06, 07 | 高 |
+| S038 | MemoryVLA: Cognition-Memory-Action Framework | (具身智能研究) | 2025 | OpenReview | 机器人记忆系统：工作记忆+感知记忆库+动作决策结合 | 06, 07 | 中 |
 
 ## 官方文档
 

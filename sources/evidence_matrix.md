@@ -102,3 +102,17 @@
 | 6.7 | 冲突解决优先级：用户显式 > 高置信传感器 > 近期 > 推断 > 旧数据 | 设计原则(非实验验证) | 弱(设计) |
 | 6.8 | 用户应拥有对记忆的完整控制权（查看/编辑/删除/冻结/导出） | S035 (GDPR) | 强(法规) |
 | 6.10 | 端侧存储 ~100MB + 云端 ~50MB 可满足典型用户需求 | 规模估算(数万 episode) | 中(估算) |
+
+## Phase 06: Context Compiler
+
+| Section | 论断 | 支撑资料 | 证据强度 |
+|---------|------|----------|----------|
+| 6.1 | Context Compiler 需 9 步 Pipeline（超越简单的 retrieve→pack 模式） | Phase 4-5 需求推导 + S012 | 中(设计) |
+| 6.2 | Context Ranker 需 9 维度评分（超越纯语义相似度） | S020 三维度 + Phase 1 约束扩展 | 中 |
+| 6.2 | TaskRelevance 应为最高权重(0.30) | S020 (relevance 是最关键维度) + S012 | 中 |
+| 6.4 | Prompt 结构应遵循"首尾高注意力"模式 | S001 (Lost in the Middle, 实验) | 强 |
+| 6.4 | 安全约束必须在 prompt 末尾重申 | Phase 1 现象3+10 (Decay+Recency) | 中 |
+| 6.4 | 不同来源内容用 XML 标签隔离 | S012 (官方推荐) + Phase 1 现象12 | 强 |
+| 6.5 | VLA 需要分离 high-level planning 和 low-level action context | S037 (OpenVLA), S038 (MemoryVLA) | 中 |
+| 6.6 | 主动服务需 Pre-flight Check，错误触发代价 > 延迟响应 | S036 (HCI研究) + 产品原则 | 中 |
+| 6.7 | 不同硬件形态需要不同的 Ranker 权重和 Budget 分配 | 各设备特性分析 | 中(推导) |
