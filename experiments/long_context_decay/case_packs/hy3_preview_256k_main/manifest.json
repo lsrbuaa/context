@@ -1,0 +1,42 @@
+{
+  "case_pack": "hy3_preview_256k_main",
+  "model_label": "Hy3 preview",
+  "context_window_tokens": 256000,
+  "reserved_output_tokens": 8192,
+  "fixed_system_overhead_tokens": 1500,
+  "usable_input_budget": 246308,
+  "tiers": [
+    0.3,
+    0.5,
+    0.7,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "samples_per_tier": 25,
+  "repeats": 1,
+  "seed": 20260625,
+  "total_cases": 150,
+  "total_trials": 150,
+  "category_counts": {
+    "distractor_resistance": 30,
+    "fact_recall": 30,
+    "instruction_following": 30,
+    "multi_hop": 30,
+    "needle_position": 30
+  },
+  "tier_counts": {
+    "0.30": 25,
+    "0.50": 25,
+    "0.70": 25,
+    "0.80": 25,
+    "0.90": 25,
+    "0.95": 25
+  },
+  "files": {
+    "cases": "cases.jsonl",
+    "answer_key": "answer_key.csv",
+    "config": "run_config.json",
+    "acceptance": "acceptance.md"
+  }
+}

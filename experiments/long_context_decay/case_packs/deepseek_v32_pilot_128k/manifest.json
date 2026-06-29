@@ -1,0 +1,42 @@
+{
+  "case_pack": "deepseek_v32_pilot_128k",
+  "model_label": "DeepSeek-V3.2",
+  "context_window_tokens": 128000,
+  "reserved_output_tokens": 4096,
+  "fixed_system_overhead_tokens": 1200,
+  "usable_input_budget": 122704,
+  "tiers": [
+    0.3,
+    0.5,
+    0.7,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "samples_per_tier": 5,
+  "repeats": 1,
+  "seed": 20260625,
+  "total_cases": 30,
+  "total_trials": 30,
+  "category_counts": {
+    "distractor_resistance": 6,
+    "fact_recall": 6,
+    "instruction_following": 6,
+    "multi_hop": 6,
+    "needle_position": 6
+  },
+  "tier_counts": {
+    "0.30": 5,
+    "0.50": 5,
+    "0.70": 5,
+    "0.80": 5,
+    "0.90": 5,
+    "0.95": 5
+  },
+  "files": {
+    "cases": "cases.jsonl",
+    "answer_key": "answer_key.csv",
+    "config": "run_config.json",
+    "acceptance": "acceptance.md"
+  }
+}

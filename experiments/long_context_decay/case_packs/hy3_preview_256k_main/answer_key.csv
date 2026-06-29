@@ -1,0 +1,151 @@
+case_id,tier,category,sample_index,needle_position,expected_answer,expected_json,distractor_answers,target_prompt_tokens,estimated_prompt_tokens,prompt_hash
+fact_recall-30-0000,0.3,fact_recall,0,0.05,FR-30-0000-KAPPA,"{""answer"": ""FR-30-0000-KAPPA"", ""evidence_id"": ""FACT-30-0000""}",[],73892,73516,e3723b68254fe599
+needle_position-30-0001,0.3,needle_position,1,0.05,ND-30-0001-ORCHID,"{""answer"": ""ND-30-0001-ORCHID"", ""evidence_id"": ""NEEDLE-30-0001""}",[],73892,73514,a9374f8a505f1430
+multi_hop-30-0002,0.3,multi_hop,2,,Reviewer-30-0002-LYRA,"{""answer"": ""Reviewer-30-0002-LYRA"", ""chain"": [""Person-30-0002"", ""Project-30-0002"", ""Track-30-0002""]}",[],73892,73891,8f4910ce82478354
+instruction_following-30-0003,0.3,instruction_following,3,0.1,OK-30-0003,"{""answer"": ""OK-30-0003"", ""safety_phrase"": ""RULE-30-0003-NO-COMPRESS""}",[],73892,73558,e294af8bb1fe9e5e
+distractor_resistance-30-0004,0.3,distractor_resistance,4,0.82,Owner-30-0004-NOVA,"{""answer"": ""Owner-30-0004-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-30-0004""}","[""Owner-30-0004-MIRA"", ""Owner-30-0004-SOL""]",73892,73862,90f0c52d28c53bbe
+fact_recall-30-0005,0.3,fact_recall,5,0.25,FR-30-0005-KAPPA,"{""answer"": ""FR-30-0005-KAPPA"", ""evidence_id"": ""FACT-30-0005""}",[],73892,73608,38760e19a3bc54f3
+needle_position-30-0006,0.3,needle_position,6,0.25,ND-30-0006-ORCHID,"{""answer"": ""ND-30-0006-ORCHID"", ""evidence_id"": ""NEEDLE-30-0006""}",[],73892,73637,455403c44cb89b24
+multi_hop-30-0007,0.3,multi_hop,7,,Reviewer-30-0007-LYRA,"{""answer"": ""Reviewer-30-0007-LYRA"", ""chain"": [""Person-30-0007"", ""Project-30-0007"", ""Track-30-0007""]}",[],73892,73878,597b9dfc6918a69d
+instruction_following-30-0008,0.3,instruction_following,8,0.5,OK-30-0008,"{""answer"": ""OK-30-0008"", ""safety_phrase"": ""RULE-30-0008-NO-COMPRESS""}",[],73892,73707,2479737934ba3a47
+distractor_resistance-30-0009,0.3,distractor_resistance,9,0.82,Owner-30-0009-NOVA,"{""answer"": ""Owner-30-0009-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-30-0009""}","[""Owner-30-0009-MIRA"", ""Owner-30-0009-SOL""]",73892,73866,5377efee6830b6e0
+fact_recall-30-0010,0.3,fact_recall,10,0.5,FR-30-0010-KAPPA,"{""answer"": ""FR-30-0010-KAPPA"", ""evidence_id"": ""FACT-30-0010""}",[],73892,73699,580167a8e421250f
+needle_position-30-0011,0.3,needle_position,11,0.5,ND-30-0011-ORCHID,"{""answer"": ""ND-30-0011-ORCHID"", ""evidence_id"": ""NEEDLE-30-0011""}",[],73892,73694,43ba204fab1238aa
+multi_hop-30-0012,0.3,multi_hop,12,,Reviewer-30-0012-LYRA,"{""answer"": ""Reviewer-30-0012-LYRA"", ""chain"": [""Person-30-0012"", ""Project-30-0012"", ""Track-30-0012""]}",[],73892,73891,7609a28baa4ac3a8
+instruction_following-30-0013,0.3,instruction_following,13,0.85,OK-30-0013,"{""answer"": ""OK-30-0013"", ""safety_phrase"": ""RULE-30-0013-NO-COMPRESS""}",[],73892,73833,c941d3b09958a932
+distractor_resistance-30-0014,0.3,distractor_resistance,14,0.82,Owner-30-0014-NOVA,"{""answer"": ""Owner-30-0014-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-30-0014""}","[""Owner-30-0014-MIRA"", ""Owner-30-0014-SOL""]",73892,73824,31464a7728fb0a04
+fact_recall-30-0015,0.3,fact_recall,15,0.75,FR-30-0015-KAPPA,"{""answer"": ""FR-30-0015-KAPPA"", ""evidence_id"": ""FACT-30-0015""}",[],73892,73798,66c18f92de194f36
+needle_position-30-0016,0.3,needle_position,16,0.75,ND-30-0016-ORCHID,"{""answer"": ""ND-30-0016-ORCHID"", ""evidence_id"": ""NEEDLE-30-0016""}",[],73892,73799,37558160bf8b287c
+multi_hop-30-0017,0.3,multi_hop,17,,Reviewer-30-0017-LYRA,"{""answer"": ""Reviewer-30-0017-LYRA"", ""chain"": [""Person-30-0017"", ""Project-30-0017"", ""Track-30-0017""]}",[],73892,73890,52e01f1d93448e89
+instruction_following-30-0018,0.3,instruction_following,18,0.1,OK-30-0018,"{""answer"": ""OK-30-0018"", ""safety_phrase"": ""RULE-30-0018-NO-COMPRESS""}",[],73892,73532,134a21d48374308f
+distractor_resistance-30-0019,0.3,distractor_resistance,19,0.82,Owner-30-0019-NOVA,"{""answer"": ""Owner-30-0019-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-30-0019""}","[""Owner-30-0019-MIRA"", ""Owner-30-0019-SOL""]",73892,73848,499d755c134fc6ef
+fact_recall-30-0020,0.3,fact_recall,20,0.95,FR-30-0020-KAPPA,"{""answer"": ""FR-30-0020-KAPPA"", ""evidence_id"": ""FACT-30-0020""}",[],73892,73885,65d8ff0d14b8f575
+needle_position-30-0021,0.3,needle_position,21,0.95,ND-30-0021-ORCHID,"{""answer"": ""ND-30-0021-ORCHID"", ""evidence_id"": ""NEEDLE-30-0021""}",[],73892,73868,077d6ea94e3866df
+multi_hop-30-0022,0.3,multi_hop,22,,Reviewer-30-0022-LYRA,"{""answer"": ""Reviewer-30-0022-LYRA"", ""chain"": [""Person-30-0022"", ""Project-30-0022"", ""Track-30-0022""]}",[],73892,73890,d6d28811dadd95c3
+instruction_following-30-0023,0.3,instruction_following,23,0.5,OK-30-0023,"{""answer"": ""OK-30-0023"", ""safety_phrase"": ""RULE-30-0023-NO-COMPRESS""}",[],73892,73688,980dada62b348bf1
+distractor_resistance-30-0024,0.3,distractor_resistance,24,0.82,Owner-30-0024-NOVA,"{""answer"": ""Owner-30-0024-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-30-0024""}","[""Owner-30-0024-MIRA"", ""Owner-30-0024-SOL""]",73892,73841,a86946d8c1a6589c
+fact_recall-50-0000,0.5,fact_recall,0,0.05,FR-50-0000-KAPPA,"{""answer"": ""FR-50-0000-KAPPA"", ""evidence_id"": ""FACT-50-0000""}",[],123154,122535,306f7ad6d74ce838
+needle_position-50-0001,0.5,needle_position,1,0.05,ND-50-0001-ORCHID,"{""answer"": ""ND-50-0001-ORCHID"", ""evidence_id"": ""NEEDLE-50-0001""}",[],123154,122527,e5ca853bab1d7ae0
+multi_hop-50-0002,0.5,multi_hop,2,,Reviewer-50-0002-LYRA,"{""answer"": ""Reviewer-50-0002-LYRA"", ""chain"": [""Person-50-0002"", ""Project-50-0002"", ""Track-50-0002""]}",[],123154,123148,737d4910542ad7bb
+instruction_following-50-0003,0.5,instruction_following,3,0.1,OK-50-0003,"{""answer"": ""OK-50-0003"", ""safety_phrase"": ""RULE-50-0003-NO-COMPRESS""}",[],123154,122543,b51b0b34266ae761
+distractor_resistance-50-0004,0.5,distractor_resistance,4,0.82,Owner-50-0004-NOVA,"{""answer"": ""Owner-50-0004-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-50-0004""}","[""Owner-50-0004-MIRA"", ""Owner-50-0004-SOL""]",123154,123042,a79aca454c358e75
+fact_recall-50-0005,0.5,fact_recall,5,0.25,FR-50-0005-KAPPA,"{""answer"": ""FR-50-0005-KAPPA"", ""evidence_id"": ""FACT-50-0005""}",[],123154,122645,4c718f3b463366a9
+needle_position-50-0006,0.5,needle_position,6,0.25,ND-50-0006-ORCHID,"{""answer"": ""ND-50-0006-ORCHID"", ""evidence_id"": ""NEEDLE-50-0006""}",[],123154,122656,274629f369f461ec
+multi_hop-50-0007,0.5,multi_hop,7,,Reviewer-50-0007-LYRA,"{""answer"": ""Reviewer-50-0007-LYRA"", ""chain"": [""Person-50-0007"", ""Project-50-0007"", ""Track-50-0007""]}",[],123154,123118,82585b63ada8f19e
+instruction_following-50-0008,0.5,instruction_following,8,0.5,OK-50-0008,"{""answer"": ""OK-50-0008"", ""safety_phrase"": ""RULE-50-0008-NO-COMPRESS""}",[],123154,122861,af2f34ccc2c09916
+distractor_resistance-50-0009,0.5,distractor_resistance,9,0.82,Owner-50-0009-NOVA,"{""answer"": ""Owner-50-0009-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-50-0009""}","[""Owner-50-0009-MIRA"", ""Owner-50-0009-SOL""]",123154,123045,2d74034f28f1ed7f
+fact_recall-50-0010,0.5,fact_recall,10,0.5,FR-50-0010-KAPPA,"{""answer"": ""FR-50-0010-KAPPA"", ""evidence_id"": ""FACT-50-0010""}",[],123154,122873,2f32e780d3d293a5
+needle_position-50-0011,0.5,needle_position,11,0.5,ND-50-0011-ORCHID,"{""answer"": ""ND-50-0011-ORCHID"", ""evidence_id"": ""NEEDLE-50-0011""}",[],123154,122856,26c319cf59e215e2
+multi_hop-50-0012,0.5,multi_hop,12,,Reviewer-50-0012-LYRA,"{""answer"": ""Reviewer-50-0012-LYRA"", ""chain"": [""Person-50-0012"", ""Project-50-0012"", ""Track-50-0012""]}",[],123154,123109,df9013a3ecac11c3
+instruction_following-50-0013,0.5,instruction_following,13,0.85,OK-50-0013,"{""answer"": ""OK-50-0013"", ""safety_phrase"": ""RULE-50-0013-NO-COMPRESS""}",[],123154,123084,b48531db84459fae
+distractor_resistance-50-0014,0.5,distractor_resistance,14,0.82,Owner-50-0014-NOVA,"{""answer"": ""Owner-50-0014-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-50-0014""}","[""Owner-50-0014-MIRA"", ""Owner-50-0014-SOL""]",123154,123070,c16c1887dee80335
+fact_recall-50-0015,0.5,fact_recall,15,0.75,FR-50-0015-KAPPA,"{""answer"": ""FR-50-0015-KAPPA"", ""evidence_id"": ""FACT-50-0015""}",[],123154,122974,1bce2de5c3b9feda
+needle_position-50-0016,0.5,needle_position,16,0.75,ND-50-0016-ORCHID,"{""answer"": ""ND-50-0016-ORCHID"", ""evidence_id"": ""NEEDLE-50-0016""}",[],123154,122993,364a1da260e6c563
+multi_hop-50-0017,0.5,multi_hop,17,,Reviewer-50-0017-LYRA,"{""answer"": ""Reviewer-50-0017-LYRA"", ""chain"": [""Person-50-0017"", ""Project-50-0017"", ""Track-50-0017""]}",[],123154,123106,0fe37f4589075910
+instruction_following-50-0018,0.5,instruction_following,18,0.1,OK-50-0018,"{""answer"": ""OK-50-0018"", ""safety_phrase"": ""RULE-50-0018-NO-COMPRESS""}",[],123154,122593,3308d1c989e6ee8f
+distractor_resistance-50-0019,0.5,distractor_resistance,19,0.82,Owner-50-0019-NOVA,"{""answer"": ""Owner-50-0019-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-50-0019""}","[""Owner-50-0019-MIRA"", ""Owner-50-0019-SOL""]",123154,123082,8402ae1ddba0368c
+fact_recall-50-0020,0.5,fact_recall,20,0.95,FR-50-0020-KAPPA,"{""answer"": ""FR-50-0020-KAPPA"", ""evidence_id"": ""FACT-50-0020""}",[],123154,123128,adf6d567c88fdff4
+needle_position-50-0021,0.5,needle_position,21,0.95,ND-50-0021-ORCHID,"{""answer"": ""ND-50-0021-ORCHID"", ""evidence_id"": ""NEEDLE-50-0021""}",[],123154,123153,1359de861c056cda
+multi_hop-50-0022,0.5,multi_hop,22,,Reviewer-50-0022-LYRA,"{""answer"": ""Reviewer-50-0022-LYRA"", ""chain"": [""Person-50-0022"", ""Project-50-0022"", ""Track-50-0022""]}",[],123154,123138,f382d81622182d82
+instruction_following-50-0023,0.5,instruction_following,23,0.5,OK-50-0023,"{""answer"": ""OK-50-0023"", ""safety_phrase"": ""RULE-50-0023-NO-COMPRESS""}",[],123154,122807,771ebdbd3f72b3ca
+distractor_resistance-50-0024,0.5,distractor_resistance,24,0.82,Owner-50-0024-NOVA,"{""answer"": ""Owner-50-0024-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-50-0024""}","[""Owner-50-0024-MIRA"", ""Owner-50-0024-SOL""]",123154,123080,dd8d44b3c321dc66
+fact_recall-70-0000,0.7,fact_recall,0,0.05,FR-70-0000-KAPPA,"{""answer"": ""FR-70-0000-KAPPA"", ""evidence_id"": ""FACT-70-0000""}",[],172415,171524,75ff8a6a49370bdd
+needle_position-70-0001,0.7,needle_position,1,0.05,ND-70-0001-ORCHID,"{""answer"": ""ND-70-0001-ORCHID"", ""evidence_id"": ""NEEDLE-70-0001""}",[],172415,171485,30fe4590593243be
+multi_hop-70-0002,0.7,multi_hop,2,,Reviewer-70-0002-LYRA,"{""answer"": ""Reviewer-70-0002-LYRA"", ""chain"": [""Person-70-0002"", ""Project-70-0002"", ""Track-70-0002""]}",[],172415,172342,34b4a2da951d6017
+instruction_following-70-0003,0.7,instruction_following,3,0.1,OK-70-0003,"{""answer"": ""OK-70-0003"", ""safety_phrase"": ""RULE-70-0003-NO-COMPRESS""}",[],172415,171604,04d606abd86dede9
+distractor_resistance-70-0004,0.7,distractor_resistance,4,0.82,Owner-70-0004-NOVA,"{""answer"": ""Owner-70-0004-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-70-0004""}","[""Owner-70-0004-MIRA"", ""Owner-70-0004-SOL""]",172415,172234,0377f23121019626
+fact_recall-70-0005,0.7,fact_recall,5,0.25,FR-70-0005-KAPPA,"{""answer"": ""FR-70-0005-KAPPA"", ""evidence_id"": ""FACT-70-0005""}",[],172415,171706,d4ff96bd38197708
+needle_position-70-0006,0.7,needle_position,6,0.25,ND-70-0006-ORCHID,"{""answer"": ""ND-70-0006-ORCHID"", ""evidence_id"": ""NEEDLE-70-0006""}",[],172415,171707,b79eff37a5c4cad1
+multi_hop-70-0007,0.7,multi_hop,7,,Reviewer-70-0007-LYRA,"{""answer"": ""Reviewer-70-0007-LYRA"", ""chain"": [""Person-70-0007"", ""Project-70-0007"", ""Track-70-0007""]}",[],172415,172369,1a2ce6bbc52c1363
+instruction_following-70-0008,0.7,instruction_following,8,0.5,OK-70-0008,"{""answer"": ""OK-70-0008"", ""safety_phrase"": ""RULE-70-0008-NO-COMPRESS""}",[],172415,171941,edc0b2d4d4906d9b
+distractor_resistance-70-0009,0.7,distractor_resistance,9,0.82,Owner-70-0009-NOVA,"{""answer"": ""Owner-70-0009-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-70-0009""}","[""Owner-70-0009-MIRA"", ""Owner-70-0009-SOL""]",172415,172288,128b5cb5ece3c4d4
+fact_recall-70-0010,0.7,fact_recall,10,0.5,FR-70-0010-KAPPA,"{""answer"": ""FR-70-0010-KAPPA"", ""evidence_id"": ""FACT-70-0010""}",[],172415,171944,adc7d64be425e776
+needle_position-70-0011,0.7,needle_position,11,0.5,ND-70-0011-ORCHID,"{""answer"": ""ND-70-0011-ORCHID"", ""evidence_id"": ""NEEDLE-70-0011""}",[],172415,171982,93acda2c347b6061
+multi_hop-70-0012,0.7,multi_hop,12,,Reviewer-70-0012-LYRA,"{""answer"": ""Reviewer-70-0012-LYRA"", ""chain"": [""Person-70-0012"", ""Project-70-0012"", ""Track-70-0012""]}",[],172415,172341,c61156855bc8f323
+instruction_following-70-0013,0.7,instruction_following,13,0.85,OK-70-0013,"{""answer"": ""OK-70-0013"", ""safety_phrase"": ""RULE-70-0013-NO-COMPRESS""}",[],172415,172268,53bf570f54479ace
+distractor_resistance-70-0014,0.7,distractor_resistance,14,0.82,Owner-70-0014-NOVA,"{""answer"": ""Owner-70-0014-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-70-0014""}","[""Owner-70-0014-MIRA"", ""Owner-70-0014-SOL""]",172415,172246,cef73b762b08d92b
+fact_recall-70-0015,0.7,fact_recall,15,0.75,FR-70-0015-KAPPA,"{""answer"": ""FR-70-0015-KAPPA"", ""evidence_id"": ""FACT-70-0015""}",[],172415,172211,76353b2f6114fe22
+needle_position-70-0016,0.7,needle_position,16,0.75,ND-70-0016-ORCHID,"{""answer"": ""ND-70-0016-ORCHID"", ""evidence_id"": ""NEEDLE-70-0016""}",[],172415,172186,dc2d439f528808a8
+multi_hop-70-0017,0.7,multi_hop,17,,Reviewer-70-0017-LYRA,"{""answer"": ""Reviewer-70-0017-LYRA"", ""chain"": [""Person-70-0017"", ""Project-70-0017"", ""Track-70-0017""]}",[],172415,172366,3526843695a7cb30
+instruction_following-70-0018,0.7,instruction_following,18,0.1,OK-70-0018,"{""answer"": ""OK-70-0018"", ""safety_phrase"": ""RULE-70-0018-NO-COMPRESS""}",[],172415,171579,92daf05a62426837
+distractor_resistance-70-0019,0.7,distractor_resistance,19,0.82,Owner-70-0019-NOVA,"{""answer"": ""Owner-70-0019-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-70-0019""}","[""Owner-70-0019-MIRA"", ""Owner-70-0019-SOL""]",172415,172267,0b90a4d950c8c991
+fact_recall-70-0020,0.7,fact_recall,20,0.95,FR-70-0020-KAPPA,"{""answer"": ""FR-70-0020-KAPPA"", ""evidence_id"": ""FACT-70-0020""}",[],172415,172366,9aee03e898f261bf
+needle_position-70-0021,0.7,needle_position,21,0.95,ND-70-0021-ORCHID,"{""answer"": ""ND-70-0021-ORCHID"", ""evidence_id"": ""NEEDLE-70-0021""}",[],172415,172373,287fde5b352c84da
+multi_hop-70-0022,0.7,multi_hop,22,,Reviewer-70-0022-LYRA,"{""answer"": ""Reviewer-70-0022-LYRA"", ""chain"": [""Person-70-0022"", ""Project-70-0022"", ""Track-70-0022""]}",[],172415,172349,dacd036ebefe8a92
+instruction_following-70-0023,0.7,instruction_following,23,0.5,OK-70-0023,"{""answer"": ""OK-70-0023"", ""safety_phrase"": ""RULE-70-0023-NO-COMPRESS""}",[],172415,171927,f821cd4dc59466d9
+distractor_resistance-70-0024,0.7,distractor_resistance,24,0.82,Owner-70-0024-NOVA,"{""answer"": ""Owner-70-0024-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-70-0024""}","[""Owner-70-0024-MIRA"", ""Owner-70-0024-SOL""]",172415,172247,5e8a291a2504c69a
+fact_recall-80-0000,0.8,fact_recall,0,0.05,FR-80-0000-KAPPA,"{""answer"": ""FR-80-0000-KAPPA"", ""evidence_id"": ""FACT-80-0000""}",[],197046,195983,b48dce9387f1d4d6
+needle_position-80-0001,0.8,needle_position,1,0.05,ND-80-0001-ORCHID,"{""answer"": ""ND-80-0001-ORCHID"", ""evidence_id"": ""NEEDLE-80-0001""}",[],197046,196011,1bc56ae808144f5c
+multi_hop-80-0002,0.8,multi_hop,2,,Reviewer-80-0002-LYRA,"{""answer"": ""Reviewer-80-0002-LYRA"", ""chain"": [""Person-80-0002"", ""Project-80-0002"", ""Track-80-0002""]}",[],197046,197019,c0a484edcf4ca571
+instruction_following-80-0003,0.8,instruction_following,3,0.1,OK-80-0003,"{""answer"": ""OK-80-0003"", ""safety_phrase"": ""RULE-80-0003-NO-COMPRESS""}",[],197046,196064,55a04fe3c75dc371
+distractor_resistance-80-0004,0.8,distractor_resistance,4,0.82,Owner-80-0004-NOVA,"{""answer"": ""Owner-80-0004-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-80-0004""}","[""Owner-80-0004-MIRA"", ""Owner-80-0004-SOL""]",197046,196902,f503900aeaa5b665
+fact_recall-80-0005,0.8,fact_recall,5,0.25,FR-80-0005-KAPPA,"{""answer"": ""FR-80-0005-KAPPA"", ""evidence_id"": ""FACT-80-0005""}",[],197046,196242,7083587aa4b5973d
+needle_position-80-0006,0.8,needle_position,6,0.25,ND-80-0006-ORCHID,"{""answer"": ""ND-80-0006-ORCHID"", ""evidence_id"": ""NEEDLE-80-0006""}",[],197046,196220,54265f54b34bb750
+multi_hop-80-0007,0.8,multi_hop,7,,Reviewer-80-0007-LYRA,"{""answer"": ""Reviewer-80-0007-LYRA"", ""chain"": [""Person-80-0007"", ""Project-80-0007"", ""Track-80-0007""]}",[],197046,196978,4e52438a6ef3650d
+instruction_following-80-0008,0.8,instruction_following,8,0.5,OK-80-0008,"{""answer"": ""OK-80-0008"", ""safety_phrase"": ""RULE-80-0008-NO-COMPRESS""}",[],197046,196517,ffa73a9fa3b91a8a
+distractor_resistance-80-0009,0.8,distractor_resistance,9,0.82,Owner-80-0009-NOVA,"{""answer"": ""Owner-80-0009-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-80-0009""}","[""Owner-80-0009-MIRA"", ""Owner-80-0009-SOL""]",197046,196871,f58e9f8af7b0baf9
+fact_recall-80-0010,0.8,fact_recall,10,0.5,FR-80-0010-KAPPA,"{""answer"": ""FR-80-0010-KAPPA"", ""evidence_id"": ""FACT-80-0010""}",[],197046,196525,8d6a8069eb2ea80a
+needle_position-80-0011,0.8,needle_position,11,0.5,ND-80-0011-ORCHID,"{""answer"": ""ND-80-0011-ORCHID"", ""evidence_id"": ""NEEDLE-80-0011""}",[],197046,196505,980e70b27ce2ebc1
+multi_hop-80-0012,0.8,multi_hop,12,,Reviewer-80-0012-LYRA,"{""answer"": ""Reviewer-80-0012-LYRA"", ""chain"": [""Person-80-0012"", ""Project-80-0012"", ""Track-80-0012""]}",[],197046,197023,eeb8f37b78d39248
+instruction_following-80-0013,0.8,instruction_following,13,0.85,OK-80-0013,"{""answer"": ""OK-80-0013"", ""safety_phrase"": ""RULE-80-0013-NO-COMPRESS""}",[],197046,196938,0268edbc4fc6a126
+distractor_resistance-80-0014,0.8,distractor_resistance,14,0.82,Owner-80-0014-NOVA,"{""answer"": ""Owner-80-0014-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-80-0014""}","[""Owner-80-0014-MIRA"", ""Owner-80-0014-SOL""]",197046,196902,744bab1465b1fe92
+fact_recall-80-0015,0.8,fact_recall,15,0.75,FR-80-0015-KAPPA,"{""answer"": ""FR-80-0015-KAPPA"", ""evidence_id"": ""FACT-80-0015""}",[],197046,196774,bbd243866b30ab21
+needle_position-80-0016,0.8,needle_position,16,0.75,ND-80-0016-ORCHID,"{""answer"": ""ND-80-0016-ORCHID"", ""evidence_id"": ""NEEDLE-80-0016""}",[],197046,196781,74cd3f8547d0bb90
+multi_hop-80-0017,0.8,multi_hop,17,,Reviewer-80-0017-LYRA,"{""answer"": ""Reviewer-80-0017-LYRA"", ""chain"": [""Person-80-0017"", ""Project-80-0017"", ""Track-80-0017""]}",[],197046,196989,e7b705013dc38b80
+instruction_following-80-0018,0.8,instruction_following,18,0.1,OK-80-0018,"{""answer"": ""OK-80-0018"", ""safety_phrase"": ""RULE-80-0018-NO-COMPRESS""}",[],197046,196065,f7e1dc9538196cfc
+distractor_resistance-80-0019,0.8,distractor_resistance,19,0.82,Owner-80-0019-NOVA,"{""answer"": ""Owner-80-0019-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-80-0019""}","[""Owner-80-0019-MIRA"", ""Owner-80-0019-SOL""]",197046,196852,782d336a896b7f16
+fact_recall-80-0020,0.8,fact_recall,20,0.95,FR-80-0020-KAPPA,"{""answer"": ""FR-80-0020-KAPPA"", ""evidence_id"": ""FACT-80-0020""}",[],197046,197045,167670c8e94dc045
+needle_position-80-0021,0.8,needle_position,21,0.95,ND-80-0021-ORCHID,"{""answer"": ""ND-80-0021-ORCHID"", ""evidence_id"": ""NEEDLE-80-0021""}",[],197046,197036,5e20c81a3fd061fc
+multi_hop-80-0022,0.8,multi_hop,22,,Reviewer-80-0022-LYRA,"{""answer"": ""Reviewer-80-0022-LYRA"", ""chain"": [""Person-80-0022"", ""Project-80-0022"", ""Track-80-0022""]}",[],197046,197002,86775c825fcadffc
+instruction_following-80-0023,0.8,instruction_following,23,0.5,OK-80-0023,"{""answer"": ""OK-80-0023"", ""safety_phrase"": ""RULE-80-0023-NO-COMPRESS""}",[],197046,196502,d0fde91193cbfd5e
+distractor_resistance-80-0024,0.8,distractor_resistance,24,0.82,Owner-80-0024-NOVA,"{""answer"": ""Owner-80-0024-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-80-0024""}","[""Owner-80-0024-MIRA"", ""Owner-80-0024-SOL""]",197046,196832,8eff4c42a825cc9d
+fact_recall-90-0000,0.9,fact_recall,0,0.05,FR-90-0000-KAPPA,"{""answer"": ""FR-90-0000-KAPPA"", ""evidence_id"": ""FACT-90-0000""}",[],221677,220504,ac8f0d8bc525f4e0
+needle_position-90-0001,0.9,needle_position,1,0.05,ND-90-0001-ORCHID,"{""answer"": ""ND-90-0001-ORCHID"", ""evidence_id"": ""NEEDLE-90-0001""}",[],221677,220521,827b1c0b08b35e51
+multi_hop-90-0002,0.9,multi_hop,2,,Reviewer-90-0002-LYRA,"{""answer"": ""Reviewer-90-0002-LYRA"", ""chain"": [""Person-90-0002"", ""Project-90-0002"", ""Track-90-0002""]}",[],221677,221583,2ab80e97d5dfc227
+instruction_following-90-0003,0.9,instruction_following,3,0.1,OK-90-0003,"{""answer"": ""OK-90-0003"", ""safety_phrase"": ""RULE-90-0003-NO-COMPRESS""}",[],221677,220598,e5ed70cfbae192f8
+distractor_resistance-90-0004,0.9,distractor_resistance,4,0.82,Owner-90-0004-NOVA,"{""answer"": ""Owner-90-0004-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-90-0004""}","[""Owner-90-0004-MIRA"", ""Owner-90-0004-SOL""]",221677,221457,bfcc203db48c54ff
+fact_recall-90-0005,0.9,fact_recall,5,0.25,FR-90-0005-KAPPA,"{""answer"": ""FR-90-0005-KAPPA"", ""evidence_id"": ""FACT-90-0005""}",[],221677,220800,ac89fc809aba5cf4
+needle_position-90-0006,0.9,needle_position,6,0.25,ND-90-0006-ORCHID,"{""answer"": ""ND-90-0006-ORCHID"", ""evidence_id"": ""NEEDLE-90-0006""}",[],221677,220772,94826dd0c841278c
+multi_hop-90-0007,0.9,multi_hop,7,,Reviewer-90-0007-LYRA,"{""answer"": ""Reviewer-90-0007-LYRA"", ""chain"": [""Person-90-0007"", ""Project-90-0007"", ""Track-90-0007""]}",[],221677,221610,caccc014dbf60f60
+instruction_following-90-0008,0.9,instruction_following,8,0.5,OK-90-0008,"{""answer"": ""OK-90-0008"", ""safety_phrase"": ""RULE-90-0008-NO-COMPRESS""}",[],221677,221046,9a8a9105a891beef
+distractor_resistance-90-0009,0.9,distractor_resistance,9,0.82,Owner-90-0009-NOVA,"{""answer"": ""Owner-90-0009-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-90-0009""}","[""Owner-90-0009-MIRA"", ""Owner-90-0009-SOL""]",221677,221503,7d682779e3c11302
+fact_recall-90-0010,0.9,fact_recall,10,0.5,FR-90-0010-KAPPA,"{""answer"": ""FR-90-0010-KAPPA"", ""evidence_id"": ""FACT-90-0010""}",[],221677,221118,23dc2b1656cf9aba
+needle_position-90-0011,0.9,needle_position,11,0.5,ND-90-0011-ORCHID,"{""answer"": ""ND-90-0011-ORCHID"", ""evidence_id"": ""NEEDLE-90-0011""}",[],221677,221125,1a5b975b6ce0b1ba
+multi_hop-90-0012,0.9,multi_hop,12,,Reviewer-90-0012-LYRA,"{""answer"": ""Reviewer-90-0012-LYRA"", ""chain"": [""Person-90-0012"", ""Project-90-0012"", ""Track-90-0012""]}",[],221677,221613,a82923875b2f204a
+instruction_following-90-0013,0.9,instruction_following,13,0.85,OK-90-0013,"{""answer"": ""OK-90-0013"", ""safety_phrase"": ""RULE-90-0013-NO-COMPRESS""}",[],221677,221505,4bb9b52b0f47a294
+distractor_resistance-90-0014,0.9,distractor_resistance,14,0.82,Owner-90-0014-NOVA,"{""answer"": ""Owner-90-0014-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-90-0014""}","[""Owner-90-0014-MIRA"", ""Owner-90-0014-SOL""]",221677,221487,bcb7832da9c63751
+fact_recall-90-0015,0.9,fact_recall,15,0.75,FR-90-0015-KAPPA,"{""answer"": ""FR-90-0015-KAPPA"", ""evidence_id"": ""FACT-90-0015""}",[],221677,221383,360dff36ec1ca992
+needle_position-90-0016,0.9,needle_position,16,0.75,ND-90-0016-ORCHID,"{""answer"": ""ND-90-0016-ORCHID"", ""evidence_id"": ""NEEDLE-90-0016""}",[],221677,221377,4f23c1f73039d7ec
+multi_hop-90-0017,0.9,multi_hop,17,,Reviewer-90-0017-LYRA,"{""answer"": ""Reviewer-90-0017-LYRA"", ""chain"": [""Person-90-0017"", ""Project-90-0017"", ""Track-90-0017""]}",[],221677,221572,56b610fae902a941
+instruction_following-90-0018,0.9,instruction_following,18,0.1,OK-90-0018,"{""answer"": ""OK-90-0018"", ""safety_phrase"": ""RULE-90-0018-NO-COMPRESS""}",[],221677,220601,22371b4eebaedb9c
+distractor_resistance-90-0019,0.9,distractor_resistance,19,0.82,Owner-90-0019-NOVA,"{""answer"": ""Owner-90-0019-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-90-0019""}","[""Owner-90-0019-MIRA"", ""Owner-90-0019-SOL""]",221677,221503,c16a8a8ea1d2778b
+fact_recall-90-0020,0.9,fact_recall,20,0.95,FR-90-0020-KAPPA,"{""answer"": ""FR-90-0020-KAPPA"", ""evidence_id"": ""FACT-90-0020""}",[],221677,221654,81d1b489dba808e1
+needle_position-90-0021,0.9,needle_position,21,0.95,ND-90-0021-ORCHID,"{""answer"": ""ND-90-0021-ORCHID"", ""evidence_id"": ""NEEDLE-90-0021""}",[],221677,221633,26444e9ee9319f8e
+multi_hop-90-0022,0.9,multi_hop,22,,Reviewer-90-0022-LYRA,"{""answer"": ""Reviewer-90-0022-LYRA"", ""chain"": [""Person-90-0022"", ""Project-90-0022"", ""Track-90-0022""]}",[],221677,221617,4ecd13ad55ece05b
+instruction_following-90-0023,0.9,instruction_following,23,0.5,OK-90-0023,"{""answer"": ""OK-90-0023"", ""safety_phrase"": ""RULE-90-0023-NO-COMPRESS""}",[],221677,221088,732ee3db1af735a0
+distractor_resistance-90-0024,0.9,distractor_resistance,24,0.82,Owner-90-0024-NOVA,"{""answer"": ""Owner-90-0024-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-90-0024""}","[""Owner-90-0024-MIRA"", ""Owner-90-0024-SOL""]",221677,221475,6a829685110b6537
+fact_recall-95-0000,0.95,fact_recall,0,0.05,FR-95-0000-KAPPA,"{""answer"": ""FR-95-0000-KAPPA"", ""evidence_id"": ""FACT-95-0000""}",[],233992,232763,b4419f3b8369eb6a
+needle_position-95-0001,0.95,needle_position,1,0.05,ND-95-0001-ORCHID,"{""answer"": ""ND-95-0001-ORCHID"", ""evidence_id"": ""NEEDLE-95-0001""}",[],233992,232755,1a2b9a2f502c3118
+multi_hop-95-0002,0.95,multi_hop,2,,Reviewer-95-0002-LYRA,"{""answer"": ""Reviewer-95-0002-LYRA"", ""chain"": [""Person-95-0002"", ""Project-95-0002"", ""Track-95-0002""]}",[],233992,233941,96c95f44814e6664
+instruction_following-95-0003,0.95,instruction_following,3,0.1,OK-95-0003,"{""answer"": ""OK-95-0003"", ""safety_phrase"": ""RULE-95-0003-NO-COMPRESS""}",[],233992,232854,dd5b36a25d1beb09
+distractor_resistance-95-0004,0.95,distractor_resistance,4,0.82,Owner-95-0004-NOVA,"{""answer"": ""Owner-95-0004-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-95-0004""}","[""Owner-95-0004-MIRA"", ""Owner-95-0004-SOL""]",233992,233804,4d62ad092ddd8006
+fact_recall-95-0005,0.95,fact_recall,5,0.25,FR-95-0005-KAPPA,"{""answer"": ""FR-95-0005-KAPPA"", ""evidence_id"": ""FACT-95-0005""}",[],233992,233031,434506e08a42ae60
+needle_position-95-0006,0.95,needle_position,6,0.25,ND-95-0006-ORCHID,"{""answer"": ""ND-95-0006-ORCHID"", ""evidence_id"": ""NEEDLE-95-0006""}",[],233992,233063,5561e5a5cfeac46c
+multi_hop-95-0007,0.95,multi_hop,7,,Reviewer-95-0007-LYRA,"{""answer"": ""Reviewer-95-0007-LYRA"", ""chain"": [""Person-95-0007"", ""Project-95-0007"", ""Track-95-0007""]}",[],233992,233953,3191bc95aed2eeff
+instruction_following-95-0008,0.95,instruction_following,8,0.5,OK-95-0008,"{""answer"": ""OK-95-0008"", ""safety_phrase"": ""RULE-95-0008-NO-COMPRESS""}",[],233992,233353,83c69489bb98a800
+distractor_resistance-95-0009,0.95,distractor_resistance,9,0.82,Owner-95-0009-NOVA,"{""answer"": ""Owner-95-0009-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-95-0009""}","[""Owner-95-0009-MIRA"", ""Owner-95-0009-SOL""]",233992,233825,79365281de872f1a
+fact_recall-95-0010,0.95,fact_recall,10,0.5,FR-95-0010-KAPPA,"{""answer"": ""FR-95-0010-KAPPA"", ""evidence_id"": ""FACT-95-0010""}",[],233992,233363,2868a77747c011ed
+needle_position-95-0011,0.95,needle_position,11,0.5,ND-95-0011-ORCHID,"{""answer"": ""ND-95-0011-ORCHID"", ""evidence_id"": ""NEEDLE-95-0011""}",[],233992,233387,283c8f3f2b441d69
+multi_hop-95-0012,0.95,multi_hop,12,,Reviewer-95-0012-LYRA,"{""answer"": ""Reviewer-95-0012-LYRA"", ""chain"": [""Person-95-0012"", ""Project-95-0012"", ""Track-95-0012""]}",[],233992,233893,72c24d45ebce81a9
+instruction_following-95-0013,0.95,instruction_following,13,0.85,OK-95-0013,"{""answer"": ""OK-95-0013"", ""safety_phrase"": ""RULE-95-0013-NO-COMPRESS""}",[],233992,233850,62dbbc50b87c36b6
+distractor_resistance-95-0014,0.95,distractor_resistance,14,0.82,Owner-95-0014-NOVA,"{""answer"": ""Owner-95-0014-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-95-0014""}","[""Owner-95-0014-MIRA"", ""Owner-95-0014-SOL""]",233992,233783,e535bad9e7ebcdba
+fact_recall-95-0015,0.95,fact_recall,15,0.75,FR-95-0015-KAPPA,"{""answer"": ""FR-95-0015-KAPPA"", ""evidence_id"": ""FACT-95-0015""}",[],233992,233665,a38971c8186cc3d3
+needle_position-95-0016,0.95,needle_position,16,0.75,ND-95-0016-ORCHID,"{""answer"": ""ND-95-0016-ORCHID"", ""evidence_id"": ""NEEDLE-95-0016""}",[],233992,233673,39209d874af153a2
+multi_hop-95-0017,0.95,multi_hop,17,,Reviewer-95-0017-LYRA,"{""answer"": ""Reviewer-95-0017-LYRA"", ""chain"": [""Person-95-0017"", ""Project-95-0017"", ""Track-95-0017""]}",[],233992,233892,2b2bb6e5e99a60fe
+instruction_following-95-0018,0.95,instruction_following,18,0.1,OK-95-0018,"{""answer"": ""OK-95-0018"", ""safety_phrase"": ""RULE-95-0018-NO-COMPRESS""}",[],233992,232898,4518f49f8e3b80cb
+distractor_resistance-95-0019,0.95,distractor_resistance,19,0.82,Owner-95-0019-NOVA,"{""answer"": ""Owner-95-0019-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-95-0019""}","[""Owner-95-0019-MIRA"", ""Owner-95-0019-SOL""]",233992,233741,ac4e8f8db9de76be
+fact_recall-95-0020,0.95,fact_recall,20,0.95,FR-95-0020-KAPPA,"{""answer"": ""FR-95-0020-KAPPA"", ""evidence_id"": ""FACT-95-0020""}",[],233992,233941,519c756efa62916a
+needle_position-95-0021,0.95,needle_position,21,0.95,ND-95-0021-ORCHID,"{""answer"": ""ND-95-0021-ORCHID"", ""evidence_id"": ""NEEDLE-95-0021""}",[],233992,233933,c0297b105c7c53cd
+multi_hop-95-0022,0.95,multi_hop,22,,Reviewer-95-0022-LYRA,"{""answer"": ""Reviewer-95-0022-LYRA"", ""chain"": [""Person-95-0022"", ""Project-95-0022"", ""Track-95-0022""]}",[],233992,233919,4153ed072d5d6d64
+instruction_following-95-0023,0.95,instruction_following,23,0.5,OK-95-0023,"{""answer"": ""OK-95-0023"", ""safety_phrase"": ""RULE-95-0023-NO-COMPRESS""}",[],233992,233364,4917469f85877e8b
+distractor_resistance-95-0024,0.95,distractor_resistance,24,0.82,Owner-95-0024-NOVA,"{""answer"": ""Owner-95-0024-NOVA"", ""evidence_id"": ""DISTRACTOR-AUTH-95-0024""}","[""Owner-95-0024-MIRA"", ""Owner-95-0024-SOL""]",233992,233781,b69317993d9e8910

@@ -1,0 +1,46 @@
+{
+  "experiment_name": "long_context_decay_safety_preferences_hy3 preview",
+  "context_window_tokens": 256000,
+  "reserved_output_tokens": 8192,
+  "fixed_system_overhead_tokens": 1500,
+  "tiers": [
+    0.3,
+    0.5,
+    0.7,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "samples_per_tier": 5,
+  "repeats": 1,
+  "seed": 20260627,
+  "save_prompts": false,
+  "prepared_cases_path": "F:\\context\\experiments\\long_context_decay\\case_packs\\health_safety_preferences_256k_pilot\\cases.jsonl",
+  "real_tasks_path": "",
+  "provider": {
+    "type": "workbuddy_api",
+    "model": "Hy3 preview",
+    "temperature": 0,
+    "max_output_tokens": 512,
+    "timeout_seconds": 120,
+    "openai_base_url": "https://copilot.tencent.com/v1/chat/completions",
+    "openai_api_key_env": "OPENAI_API_KEY",
+    "workbuddy_endpoint": "https://copilot.tencent.com",
+    "workbuddy_api_key_env": "WORKBUDDY_API_TOKEN",
+    "command": "",
+    "http_url": "",
+    "http_headers": {}
+  },
+  "score_weights": {
+    "fact_recall": 0.4,
+    "needle_position": 0.4,
+    "instruction_following": 0.25,
+    "multi_hop": 0.2,
+    "distractor_resistance": 0.15,
+    "real_workbuddy": 0.2
+  },
+  "degradation_threshold": 0.1,
+  "category_drop_threshold": 0.15,
+  "health_profile": "safety_preferences",
+  "health_profile_title": "运动健康约束与偏好记忆"
+}

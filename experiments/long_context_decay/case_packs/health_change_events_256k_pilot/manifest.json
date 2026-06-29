@@ -1,0 +1,46 @@
+{
+  "case_pack": "health_change_events_256k_pilot",
+  "model_label": "Hy3 preview",
+  "health_profile": "change_events",
+  "health_profile_title": "运动健康习惯变更识别",
+  "health_profile_description": "在旧计划、新计划和日常噪声中识别当前有效习惯。",
+  "context_window_tokens": 256000,
+  "reserved_output_tokens": 8192,
+  "fixed_system_overhead_tokens": 1500,
+  "usable_input_budget": 246308,
+  "tiers": [
+    0.3,
+    0.5,
+    0.7,
+    0.8,
+    0.9,
+    0.95
+  ],
+  "samples_per_tier": 5,
+  "repeats": 1,
+  "seed": 20260626,
+  "total_cases": 30,
+  "total_trials": 30,
+  "category_counts": {
+    "distractor_resistance": 6,
+    "fact_recall": 6,
+    "instruction_following": 6,
+    "multi_hop": 6,
+    "needle_position": 6
+  },
+  "tier_counts": {
+    "0.30": 5,
+    "0.50": 5,
+    "0.70": 5,
+    "0.80": 5,
+    "0.90": 5,
+    "0.95": 5
+  },
+  "files": {
+    "cases": "cases.jsonl",
+    "answer_key": "answer_key.csv",
+    "config": "run_config.json",
+    "acceptance": "acceptance.md",
+    "workbuddy_instructions": "WORKBUDDY_INSTRUCTIONS.md"
+  }
+}
